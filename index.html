@@ -59,9 +59,15 @@
       <a-asset-item id="watergun-gltf" src="https://cdn.glitch.global/d29f98b4-ddd1-4589-8b66-e2446690e697/watergun.glb?v=1646916260646"></a-asset-item>
       <a-asset-item id="stew-gltf" src="https://cdn.glitch.global/d29f98b4-ddd1-4589-8b66-e2446690e697/model.gltf?v=1690887932932"></a-asset-item>
       <a-asset-item id="table-gltf" src="https://cdn.glitch.global/d29f98b4-ddd1-4589-8b66-e2446690e697/small_wooden_table_01_1k-v1.glb?v=1647263187998"></a-asset-item>
-      <a-asset-item id="clock-gltf" src="https://cdn.glitch.global/d29f98b4-ddd1-4589-8b66-e2446690e697/vintage_grandfather_clock_01_1k-v2.glb?v=1647265174189"></a-asset-item>
-      <a-asset-item id="ladder-gltf" src="https://cdn.glitch.global/d29f98b4-ddd1-4589-8b66-e2446690e697/ladder.glb?v=1648465045608"></a-asset-item>
       <a-asset-item id="thoth-gltf" src="models/thoth/scene.gltf"></a-asset-item>
+      <a-asset-item id="bastet-gltf" src="models/bastet/scene.gltf"></a-asset-item>
+      <a-asset-item id="ramesses-gltf" src="models/ramesses/scene.gltf"></a-asset-item>
+      <a-asset-item id="hatshepsut-gltf" src="models/hatshepsut/scene.gltf"></a-asset-item>
+      <a-asset-item id="sphinx-gltf" src="models/sphinx/scene.gltf"></a-asset-item>
+      <a-asset-item id="tutankhamun-gltf" src="models/tutankhamun/scene.gltf"></a-asset-item>
+      <a-asset-item id="sarcophagus-gltf" src="models/sarcophagus/scene.gltf"></a-asset-item>
+      <a-asset-item id="piramid-gltf" src="models/gizaPiramid/scene.gltf"></a-asset-item>
+
       <img id="bake" src="https://cdn.glitch.global/d29f98b4-ddd1-4589-8b66-e2446690e697/Bake(3).webp?v=1644331344700" crossorigin="anonymous">
       <a-mixin id="animations" animation__click="property: components.material.material.color; type: color; to: blue; startEvents: click; dur: 500;"></a-mixin>
       <a-mixin id="blink" blink-controls="rotateOnTeleport:false;cameraRig: #cameraRig; teleportOrigin: #head; collisionEntities:.navmesh;"></a-mixin>
@@ -159,15 +165,8 @@
       </a-entity>
     </a-entity>
     
-    <a-entity id="my-ar-objects" position="-6 0 1">
-      <!-- "Dusty Piano" (https://skfb.ly/66EPx) by Vincent074 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). -->
-      <a-gltf-model id="piano" rotation="0 100 0" shadow="receive:false;cast:true;" src="https://cdn.glitch.global/d29f98b4-ddd1-4589-8b66-e2446690e697/piano.glb?v=1644414775118">
-        <a-plane rotation="-90 0 0" width="1.5" height="0.6" class="navmesh-hole" visible="false"></a-plane>
-      </a-gltf-model>
-    </a-entity>
-
     <!-- This plane is only visible in AR and follows the given target to provide it with shadows.-->
-    <a-light id="dirlight" shadow-camera-automatic="[ar-shadow-helper],#table,#ladder" intensity="0.8" light="castShadow:true;type:directional" position="0 3 -6"></a-light>
+    <a-light id="dirlight" shadow-camera-automatic="[ar-shadow-helper],#table" intensity="0.8" light="castShadow:true;type:directional" position="0 3 -6"></a-light>
     <a-entity ar-shadow-helper="target:#my-ar-objects;light:#dirlight;" visible="false">
       <a-plane rotation="-90 0 0" shadow="cast:false;receive:true;" position="0 0.01 0" material="shader:shadow; depthWrite:false; opacity:0.9;"></a-plane>
     </a-entity>
@@ -187,33 +186,39 @@
         <a-entity id="stew-handle-2" data-magnet-range="0.2,0.1,360,180" data-pick-up="parent" class="magnet-left magnet-right" position="0 0.35 0.35" rotation="0 90 0"></a-entity>
       </a-gltf-model>
       -->
-      <a-gltf-model id="table" shadow="receive:true;" src="#table-gltf" position="-2 0 0.8" rotation="0 51 0" scale="1.5 1.5 1.5" physx-body-from-model="type: static;">
+      <a-gltf-model id="table" shadow="receive:true;" src="#table-gltf" position="-5.5 0 7.1" rotation="0 90 0" scale="1.5 1.5 1.5" physx-body-from-model="type: static;">
         <a-plane rotation="-90 0 0" width="1.2" height="0.6" class="navmesh-hole" visible="false"></a-plane>
       </a-gltf-model>
 
-      <a-gltf-model id="thoth" shadow="receive:true;" src="#thoth-gltf" position="-10 1 8"></a-gltf-model>
-      
-      <!-- Button test -->
-      <a-box position="-1.657 0.893 0.421" width="0.2" height="0.2" depth="0.2" color="grey"
-          animation__press="startEvents:press;property:components.material.material.color;type:color;to:green;dur:100;"
-          animation__release="startEvents:release;property:components.material.material.color;type:color;to:grey;dur:100;"
-      >
-        <a-entity position="0 0.12 0" linear-constraint="target:[data-no-magnet];axis:0 1 0;min:0;max:0.18;radius:0.1;useFixedValueIfOutOfRange:true;valueIfOutOfRange:0.18;downEventName:press;downEventThreshold:0;upEventName:release;upEventThreshold:0.18;">
-          <a-cylinder radius="0.09" height="0.2" position="0 -0.1 0" color="hotpink"></a-cylinder>
-        </a-entity>
-      </a-box>
-  
-      <a-gltf-model id="ladder" ladder="grabbables:#ladder-left-hand,#ladder-right-hand;cameraRig:#cameraRig;" shadow src="#ladder-gltf" position="-4.98177 -0.01925 -2.97802" rotation="-4.9623 -62.929 0.6165" physx-body-from-model="type: static;">
-        <a-plane rotation="-90 0 0" width="1.2" height="0.6" class="navmesh-hole" visible="false"></a-plane>
-        <a-entity position="-0.25 0.07 0" linear-constraint="target:#left-no-magnet;axis:0 1 0;min:0;max:2.4;step:0.2;">
-          <a-entity id="ladder-left-hand" data-magnet-range="0.2,0.15,360,300" class="magnet-left" rotation="0 90 0" linear-constraint="target:#left-no-magnet;axis:1 0 0;max:0.5;"></a-entity>
-        </a-entity>
-        <a-entity position="-0.25 0.07 0" linear-constraint="target:#right-no-magnet;axis:0 1 0;max:2.5;step:0.2;">
-          <a-entity id="ladder-right-hand" data-magnet-range="0.2,0.15,360,300" class="magnet-right" rotation="0 -90 0" linear-constraint="target:#right-no-magnet;axis:1 0 0;max:0.5;"></a-entity>
-        </a-entity>
-      </a-gltf-model>
-      
-      <a-gltf-model id="clock" shadow="receive:true;" src="#clock-gltf" position="-5 0 1.8" rotation="0 51 0" physx-body-from-model="type:dynamic;mass:15;"></a-gltf-model>
+      <a-gltf-model id="thoth" shadow="receive:true;" src="#thoth-gltf" position="-9 1 8"></a-gltf-model>
+      <a-text value="Thoth" color="white" position="-8 4 -3.7" align="center"></a-text>
+
+      <a-gltf-model id="bastet" shadow="receive:true;" src="#bastet-gltf" position="-5.6 0.37 6.5" rotation="0 50 -5" scale="0.02 0.02 0.02"></a-gltf-model>
+      <a-text value="Bastet" color="white" position="-5.6 2.5 7.2" rotation="0 90 0" align="center"></a-text>
+
+      <a-gltf-model id="Ramesses" shadow="receive:true;" src="#ramesses-gltf" position="0.3 1 13.5" rotation="0 180 0" scale="0.5 0.5 0.5"></a-gltf-model>
+      <a-text value="Ramesses" color="white" position="0.45 4.5 7.8" rotation="0 180 0" align="center"></a-text>
+
+      <a-gltf-model id="hatshepsut" shadow="receive:true;" src="#hatshepsut-gltf" position="16 1 -0.4" rotation="0 180 0" scale="2 2 2"></a-gltf-model>
+      <a-text value="Hatshepsut" color="white" position="16 3.7 -0.4" rotation="0 -90 0" align="center"></a-text>
+
+      <a-gltf-model id="sphinx" shadow="receive:true;" src="#sphinx-gltf" position="13.3 2.9 2.2" rotation="180 -90 0" scale="0.3 0.3 0.3"></a-gltf-model>
+      <a-text value="Sphinx" color="white" position="11 3 3.7" rotation="0 -90 0" align="center"></a-text>
+
+      <a-gltf-model id="sphinx2" shadow="receive:true;" src="#sphinx-gltf" position="13.3 2.9 -5.5" rotation="180 -90 0" scale="0.3 0.3 0.3"></a-gltf-model>
+      <a-text value="Sphinx" color="white" position="11 3 -4" rotation="0 -90 0" align="center"></a-text>
+
+      <a-gltf-model id="tutankhamun" shadow="receive:true;" src="#tutankhamun-gltf" position="-15.3 0.8 9" rotation="0 180 0" scale="0.02 0.02 0.02"></a-gltf-model>
+      <a-text value="Tutankhamun" color="white" position="-15.2 3.5 8.4" rotation="0 180 0" align="center"></a-text>
+
+      <a-gltf-model id="sarcophagus" shadow="receive:true;" src="#sarcophagus-gltf" position="-15.3 0.4 -2" rotation="0 90 0" scale="0.02 0.02 0.02"></a-gltf-model>
+      <a-text value="Sarcophagus" color="white" position="-15.3 2 -2" align="center"></a-text>
+
+      <a-gltf-model id="piramid" shadow="receive:true;" src="#piramid-gltf" position="-15 -3 -40" rotation="0 90 0" scale="0.3 0.3 0.3"></a-gltf-model>
+      <a-text value="Piramid" color="white" position="-13.5 15 -30" align="center" scale="10 10 10"></a-text>
+
+
+
       <a-gltf-model class="navmesh" src="#navmesh-glb" visible="false"></a-gltf-model>
       <a-gltf-model src="#building-glb"
         id="building"
@@ -231,9 +236,6 @@
   </a-scene>
 
   <div id="dom-overlay">
-    <h1>
-      Hello World
-    </h1>
     <div class="overlay-footer">
       <section style="display: inline-block; background: lavenderblush; color: #333333; border-radius: 1em; padding: 1em; margin:0; accent-color: hotpink;" id="my-interface">
         <h2>Settings</h2>
@@ -275,8 +277,6 @@
       <div id="dom-overlay-message">Enter AR or VR to start.</div>
     </div>
   </div>
-  
-  <div class="glitchButton" style="position: absolute; top: 1em; right: 1em;"></div><script src="https://button.glitch.me/button.js"></script>
 </body>
 
 </html>
