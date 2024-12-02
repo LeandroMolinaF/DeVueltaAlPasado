@@ -202,8 +202,24 @@
       <a-gltf-model id="hatshepsut" shadow="receive:true;" src="#hatshepsut-gltf" position="16 1 -0.4" rotation="0 180 0" scale="2 2 2"></a-gltf-model>
       <a-text value="Hatshepsut" color="white" position="16 3.7 -0.4" rotation="0 -90 0" align="center"></a-text>
 
-      <a-gltf-model id="sphinx" shadow="receive:true;" src="#sphinx-gltf" position="13.3 2.9 2.2" rotation="180 -90 0" scale="0.3 0.3 0.3"></a-gltf-model>
-      <a-text value="Sphinx" color="white" position="11 3 3.7" rotation="0 -90 0" align="center"></a-text>
+      <a-entity id="models-container">
+        <!-- Ejemplo para el modelo de la esfinge -->
+        <a-gltf-model id="sphinx-model" src="#sphinx-gltf" position="13.3 2.9 2.2" rotation="180 -90 0" scale="0.3 0.3 0.3">
+          <!-- Nombre visible al acercarse -->
+          <a-entity 
+            text="value: Esfinge; color: white; align: center; width: 3"
+            position="0 2 0" 
+            rotation="180 0 0"
+            visible="false"
+            scale="3 3 3"
+            id="sphinx-label"
+            look-at="#cameraRig"
+          ></a-entity>
+        </a-gltf-model>
+      </a-entity>
+
+      <!-- <a-gltf-model id="sphinx" shadow="receive:true;" src="#sphinx-gltf" position="13.3 2.9 2.2" rotation="180 -90 0" scale="0.3 0.3 0.3"></a-gltf-model>
+      <a-text value="Sphinx" color="white" position="11 3 3.7" rotation="0 -90 0" align="center"></a-text> -->
 
       <a-gltf-model id="sphinx2" shadow="receive:true;" src="#sphinx-gltf" position="13.3 2.9 -5.5" rotation="180 -90 0" scale="0.3 0.3 0.3"></a-gltf-model>
       <a-text value="Sphinx" color="white" position="11 3 -4" rotation="0 -90 0" align="center"></a-text>
@@ -274,6 +290,51 @@
           cameraRig.setAttribute('movement-controls', 'enabled', true);
         });
       </script>
+
+<script>
+  AFRAME.registerComponent('show-on-proximity', {
+    schema: {
+      target: { type: 'selector', default: '#cameraRig' },
+      distance: { type: 'number', default: 5 }, // Distancia para mostrar el texto
+    },
+    init: function () {
+      this.label = this.el.querySelector('[text]'); // Busca el texto dentro del modelo
+      this.label.setAttribute('visible', 'false');
+    },
+    tick: function () {
+      const targetPosition = this.data.target.object3D.position;
+      const modelPosition = this.el.object3D.position;
+
+      // Calcula la distancia entre el jugador y el modelo
+      const distance = modelPosition.distanceTo(targetPosition);
+      // Muestra o esconde el texto según la distancia
+      console.log(distance)
+      console.log(this.data.distance)
+      if (distance <= this.data.distance) {
+        if (!this.label.getAttribute('visible')) {
+          this.label.setAttribute('visible', 'true');
+          this.label.setAttribute('animation', {
+            property: 'position',
+            from: '0 0 0',
+            to: '0 2 0',
+            dur: 1000,
+            easing: 'easeOutCubic',
+          });
+        }
+      } else {
+        if (this.label.getAttribute('visible')) {
+          this.label.setAttribute('visible', 'false');
+        }
+      }
+    },
+  });
+
+  // Agrega el componente a cada modelo automáticamente
+  document.querySelectorAll('#models-container > a-gltf-model').forEach(model => {
+    model.setAttribute('show-on-proximity', 'distance: 5');
+  });
+</script>
+
       <div id="dom-overlay-message">Enter AR or VR to start.</div>
     </div>
   </div>
