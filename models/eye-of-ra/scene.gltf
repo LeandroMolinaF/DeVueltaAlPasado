@@ -1,0 +1,256 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 35731,
+      "max": [
+        0.7061690092086792,
+        0.62142401933670044,
+        0.11778900027275085
+      ],
+      "min": [
+        -0.642333984375,
+        -0.4924049973487854,
+        -0.096198998391628265
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 428772,
+      "componentType": 5126,
+      "count": 35731,
+      "max": [
+        0.9999580979347229,
+        0.99993723630905151,
+        0.9999997615814209
+      ],
+      "min": [
+        -0.99991035461425781,
+        -0.99966001510620117,
+        -0.99999499320983887
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 35731,
+      "max": [
+        0.99998050928115845,
+        0.99990618228912354,
+        0.99609643220901489,
+        1
+      ],
+      "min": [
+        -0.99999946355819702,
+        -0.99995207786560059,
+        -0.99999505281448364,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 35731,
+      "max": [
+        1,
+        1
+      ],
+      "min": [
+        0,
+        1.8999999156221747e-05
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 189798,
+      "max": [
+        35730
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Minneapolis Institute of Art (https://sketchfab.com/artsmia)",
+      "license": "CC0-1.0 (http://creativecommons.org/publicdomain/zero/1.0/)",
+      "source": "https://sketchfab.com/3d-models/udjat-eye-of-ra-1297-1185-bce-7300d219ed944585ace4b2509bef4f6e",
+      "title": "Udjat Eye of Ra, 1297-1185 BCE"
+    },
+    "generator": "Sketchfab-7.80.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 759192,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 285848,
+      "byteOffset": 759192,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 857544,
+      "byteOffset": 1045040,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 571696,
+      "byteOffset": 1902584,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 2474280,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/EyeOfRah_OBJ_MeshSG_baseColor.png"
+    },
+    {
+      "uri": "textures/EyeOfRah_OBJ_MeshSG_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "EyeOfRah_OBJ_MeshSG",
+      "normalTexture": {
+        "index": 1,
+        "scale": 1,
+        "texCoord": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.59999999999999998
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        -0.98950046300888062,
+        0.096900716423988342,
+        0.1072336882352829,
+        0,
+        0.10961686074733734,
+        0.01959911547601223,
+        0.99378067255020142,
+        0,
+        0.094196371734142303,
+        0.99510103464126587,
+        -0.030015287920832634,
+        0,
+        -1.6263877153396606,
+        2.5307562351226807,
+        8.2760944366455078,
+        1
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "EyeOfRah_OBJ_.obj.cleaner.materialmerger.gles"
+    },
+    {
+      "mesh": 0,
+      "name": ""
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    }
+  ]
+}
+

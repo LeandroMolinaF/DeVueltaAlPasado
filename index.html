@@ -24,7 +24,7 @@
   <!-- Our custom behaviour -->
   <script src="main.js"></script>
   
-  <title>AFrame Handy Demo</title>
+  <title>De Vuelta Al Pasado</title>
   <meta property="og:title" content="AFrame Handy Work Demo" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@AdaRoseCannon" />
@@ -62,6 +62,8 @@
       <a-asset-item id="clock-gltf" src="https://cdn.glitch.global/d29f98b4-ddd1-4589-8b66-e2446690e697/vintage_grandfather_clock_01_1k-v2.glb?v=1647265174189"></a-asset-item>
       <a-asset-item id="ladder-gltf" src="https://cdn.glitch.global/d29f98b4-ddd1-4589-8b66-e2446690e697/ladder.glb?v=1648465045608"></a-asset-item>
       <a-asset-item id="thoth-gltf" src="models/thoth/scene.gltf"></a-asset-item>
+      <a-asset-item id="eye-of-ra-gltf" src="models/eye-of-ra/scene.gltf"></a-asset-item>
+      <a-asset-item id="coffin-of-ruru-gltf" src="models/coffin-of-ruru/scene.gltf"></a-asset-item>
       <img id="bake" src="https://cdn.glitch.global/d29f98b4-ddd1-4589-8b66-e2446690e697/Bake(3).webp?v=1644331344700" crossorigin="anonymous">
       <a-mixin id="animations" animation__click="property: components.material.material.color; type: color; to: blue; startEvents: click; dur: 500;"></a-mixin>
       <a-mixin id="blink" blink-controls="rotateOnTeleport:false;cameraRig: #cameraRig; teleportOrigin: #head; collisionEntities:.navmesh;"></a-mixin>
@@ -167,7 +169,7 @@
     </a-entity>
 
     <!-- This plane is only visible in AR and follows the given target to provide it with shadows.-->
-    <a-light id="dirlight" shadow-camera-automatic="[ar-shadow-helper],#table,#ladder" intensity="0.8" light="castShadow:true;type:directional" position="0 3 -6"></a-light>
+    <a-light id="dirlight" shadow-camera-automatic="[ar-shadow-helper],#table,#ladder" intensity="0.9" light="castShadow:true;type:directional" position="0 3 -6"></a-light>
     <a-entity ar-shadow-helper="target:#my-ar-objects;light:#dirlight;" visible="false">
       <a-plane rotation="-90 0 0" shadow="cast:false;receive:true;" position="0 0.01 0" material="shader:shadow; depthWrite:false; opacity:0.9;"></a-plane>
     </a-entity>
@@ -191,7 +193,13 @@
         <a-plane rotation="-90 0 0" width="1.2" height="0.6" class="navmesh-hole" visible="false"></a-plane>
       </a-gltf-model>
 
-      <a-gltf-model id="thoth" shadow="receive:true;" src="#thoth-gltf" position="-10 1 8"></a-gltf-model>
+
+      <!--Modelos egito 
+      -->
+      <a-gltf-model id="eye-of-ra" src="#eye-of-ra-gltf" position="0 1 -3" scale="3 3 3"></a-gltf-model>
+      <a-gltf-model id="coffin-of-ruru" shadow="receive:true;" src="#coffin-of-ruru" position="-8 2 10" scale="1.5 1.5 1.5"></a-gltf-model>
+      <a-gltf-model id="thoth" shadow="receive:true;" src="#thoth-gltf" position="9.5 1 7.5"></a-gltf-model>
+      
       
       <!-- Button test -->
       <a-box position="-1.657 0.893 0.421" width="0.2" height="0.2" depth="0.2" color="grey"
@@ -278,5 +286,15 @@
   
   <div class="glitchButton" style="position: absolute; top: 1em; right: 1em;"></div><script src="https://button.glitch.me/button.js"></script>
 </body>
+
+<script>
+  document.querySelector('#eye-of-ra').addEventListener('model-loaded', () => {
+    console.log('Modelo Eye of Ra cargado correctamente');
+  });
+
+  document.querySelector('#eye-of-ra').addEventListener('error', (e) => {
+    console.error('Error al cargar el modelo Eye of Ra', e);
+  });
+</script>
 
 </html>

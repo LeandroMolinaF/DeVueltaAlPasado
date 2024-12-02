@@ -1,0 +1,399 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 18579,
+      "max": [
+        1.014341950416565,
+        0.946524977684021,
+        0.30334600806236267
+      ],
+      "min": [
+        -1.052914023399353,
+        0.17640000581741333,
+        -0.19665400683879852
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 222948,
+      "componentType": 5126,
+      "count": 18579,
+      "max": [
+        0.9999889135360718,
+        0.9999935626983643,
+        0.9999982118606567
+      ],
+      "min": [
+        -1.0,
+        -0.9999953508377075,
+        -0.9999977350234985
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 18579,
+      "max": [
+        0.9999969601631165,
+        0.9999751448631287,
+        0.9999988675117493,
+        1.0
+      ],
+      "min": [
+        -0.9999918937683105,
+        -0.9999949932098389,
+        -0.999998152256012,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 18579,
+      "max": [
+        0.99480801820755,
+        0.9990000128746033
+      ],
+      "min": [
+        0.0010000000474974513,
+        0.0010000000474974513
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 89931,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 445896,
+      "componentType": 5126,
+      "count": 16402,
+      "max": [
+        1.0118399858474731,
+        -0.18627099692821503,
+        0.20316900312900543
+      ],
+      "min": [
+        -1.0311670303344727,
+        -0.9112709760665894,
+        -0.19327400624752045
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 642720,
+      "componentType": 5126,
+      "count": 16402,
+      "max": [
+        0.9999756813049316,
+        0.9999703168869019,
+        0.9999980926513672
+      ],
+      "min": [
+        -0.9998717308044434,
+        -0.9999005794525146,
+        -0.9999998807907104
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 297264,
+      "componentType": 5126,
+      "count": 16402,
+      "max": [
+        0.999904990196228,
+        0.9999933242797852,
+        0.9999507665634155,
+        1.0
+      ],
+      "min": [
+        -0.9999961853027344,
+        -0.9999977350234985,
+        -0.999961256980896,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 148632,
+      "componentType": 5126,
+      "count": 16402,
+      "max": [
+        0.9990000128746033,
+        0.9953479766845703
+      ],
+      "min": [
+        0.0010000000474974513,
+        0.0010000000474974513
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 359724,
+      "componentType": 5125,
+      "count": 90000,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Museo Arqueológico Nacional (https://sketchfab.com/man)",
+      "license": "CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)",
+      "source": "https://sketchfab.com/3d-models/ataud-de-una-sacerdotisa-de-amon-restaurado-732cc6d7eb40430ab774043d3dc77357",
+      "title": "Ataúd de una sacerdotisa de Amón (Restaurado)"
+    },
+    "generator": "Sketchfab-16.41.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 719724,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 279848,
+      "byteOffset": 719724,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 839544,
+      "byteOffset": 999572,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 559696,
+      "byteOffset": 1839116,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 2398812,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_specular"
+  ],
+  "images": [
+    {
+      "uri": "textures/Caja_Ruru_final_LP.001_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/Caja_Ruru_final_LP.001_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Caja_Ruru_final_LP.001_normal.jpeg"
+    },
+    {
+      "uri": "textures/Tapa_fin_decim_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/Tapa_fin_decim_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Tapa_fin_decim_normal.jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularColorFactor": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "specularFactor": 0.291
+        }
+      },
+      "name": "Caja_Ruru_final_LP.001",
+      "normalTexture": {
+        "index": 2
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 1
+        },
+        "roughnessFactor": 0.7423780487804879
+      }
+    },
+    {
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularColorFactor": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "specularFactor": 0.29115853658536583
+        }
+      },
+      "name": "Tapa_fin_decim",
+      "normalTexture": {
+        "index": 5
+      },
+      "occlusionTexture": {
+        "index": 4
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 3
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 4
+        },
+        "roughnessFactor": 0.8338414634146342
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Object_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Object_1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2,
+        3
+      ],
+      "name": "Ataud_Meret_Ra_Amon.obj.cleaner.materialmerger.gles"
+    },
+    {
+      "mesh": 0,
+      "name": "Object_2"
+    },
+    {
+      "mesh": 1,
+      "name": "Object_3"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    }
+  ]
+}

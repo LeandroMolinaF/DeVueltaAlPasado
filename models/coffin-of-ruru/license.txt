@@ -1,0 +1,11 @@
+Model Information:
+* title:	Ataúd de una sacerdotisa de Amón (Restaurado)
+* source:	https://sketchfab.com/3d-models/ataud-de-una-sacerdotisa-de-amon-restaurado-732cc6d7eb40430ab774043d3dc77357
+* author:	Museo Arqueológico Nacional (https://sketchfab.com/man)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Ataúd de una sacerdotisa de Amón (Restaurado)" (https://sketchfab.com/3d-models/ataud-de-una-sacerdotisa-de-amon-restaurado-732cc6d7eb40430ab774043d3dc77357) by Museo Arqueológico Nacional (https://sketchfab.com/man) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
