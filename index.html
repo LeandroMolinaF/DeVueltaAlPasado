@@ -190,48 +190,114 @@
         <a-plane rotation="-90 0 0" width="1.2" height="0.6" class="navmesh-hole" visible="false"></a-plane>
       </a-gltf-model>
 
-      <a-gltf-model id="thoth" shadow="receive:true;" src="#thoth-gltf" position="-9 1 8"></a-gltf-model>
-      <a-text value="Thoth" color="white" position="-8 4 -3.7" align="center"></a-text>
-
-      <a-gltf-model id="bastet" shadow="receive:true;" src="#bastet-gltf" position="-5.6 0.37 6.5" rotation="0 50 -5" scale="0.02 0.02 0.02"></a-gltf-model>
-      <a-text value="Bastet" color="white" position="-5.6 2.5 7.2" rotation="0 90 0" align="center"></a-text>
-
-      <a-gltf-model id="Ramesses" shadow="receive:true;" src="#ramesses-gltf" position="0.3 1 13.5" rotation="0 180 0" scale="0.5 0.5 0.5"></a-gltf-model>
-      <a-text value="Ramesses" color="white" position="0.45 4.5 7.8" rotation="0 180 0" align="center"></a-text>
-
-      <a-gltf-model id="hatshepsut" shadow="receive:true;" src="#hatshepsut-gltf" position="16 1 -0.4" rotation="0 180 0" scale="2 2 2"></a-gltf-model>
-      <a-text value="Hatshepsut" color="white" position="16 3.7 -0.4" rotation="0 -90 0" align="center"></a-text>
-
       <a-entity id="models-container">
-        <!-- Ejemplo para el modelo de la esfinge -->
-        <a-gltf-model id="sphinx-model" src="#sphinx-gltf" position="13.3 2.9 2.2" rotation="180 -90 0" scale="0.3 0.3 0.3">
-          <!-- Nombre visible al acercarse -->
+        <!-- Contenedor de la Esfinge -->
+        <a-entity id="sphinx-container" position="13.3 2.9 2.2">      
+          <a-gltf-model id="sphinx-model" src="#sphinx-gltf" position="0 0 0" rotation="180 -90 0" scale="0.3 0.3 0.3"></a-gltf-model>
           <a-entity 
-            text="value: Esfinge; color: white; align: center; width: 3"
-            position="0 2 0" 
-            rotation="180 0 0"
-            visible="false"
+            id="sphinx-label" 
+            text="value: Esfinge; color: white; align: center; width: 3" 
+            position="-2 1 1.5" 
+            rotation="0 -90 0" 
+            scale="3 3 3" 
+            visible="false">
+          </a-entity>
+        </a-entity>
+        
+        <!-- Contenedor de la Esfinge2 -->
+        <a-entity id="sphinx-container2" position="13.3 2.9 -5.2">      
+          <a-gltf-model id="sphinx-model2" src="#sphinx-gltf" position="0 0 0" rotation="180 -90 0" scale="0.3 0.3 0.3"></a-gltf-model>
+          <a-entity 
+            id="sphinx2-label" 
+            text="value: Esfinge; color: white; align: center; width: 3" 
+            position="-2 1 1.5" 
+            rotation="0 -90 0" 
+            scale="3 3 3" 
+            visible="false">
+          </a-entity>
+        </a-entity>
+      
+        <!-- Contenedor de Thoth -->
+        <a-entity id="thoth-container" position="-9 1 8">      
+          <a-gltf-model id="thoth-model" src="#thoth-gltf" position="0 0 0"></a-gltf-model>
+          <a-entity 
+            id="thoth-label" 
+            text="value: Thoth; color: white; align: center; width: 3" 
+            position="0.5 3 -10" 
+            visible="false">
+          </a-entity>
+        </a-entity>
+      
+        <!-- Contenedor de Bastet -->
+        <a-entity id="bastet-container" position="-5.6 0.37 6.5">      
+          <a-gltf-model id="bastet-model" src="#bastet-gltf" position="0 0 0" rotation="0 50 -5" scale="0.02 0.02 0.02"></a-gltf-model>
+          <a-entity 
+            id="bastet-label" 
+            text="value: Bastet; color: white; align: center; width: 3" 
+            position="0 2 0.7 " 
             scale="3 3 3"
-            id="sphinx-label"
-            look-at="#cameraRig"
-          ></a-entity>
-        </a-gltf-model>
+            rotation="0 90 0" 
+            visible="false">
+          </a-entity>
+        </a-entity>
+      
+        <!-- Contenedor de Ramesses -->
+        <a-entity id="ramesses-container" position="0.3 1 13.5">      
+          <a-gltf-model id="ramesses-model" src="#ramesses-gltf" position="0 0 0" rotation="0 180 0" scale="0.5 0.5 0.5"></a-gltf-model>
+          <a-entity 
+            id="ramesses-label" 
+            text="value: Ramesses; color: white; align: center; width: 3" 
+            position="0 3 0" 
+            scale="3 3 3"
+            visible="false">
+          </a-entity>
+        </a-entity>
+      
+        <!-- Contenedor de Hatshepsut -->
+        <a-entity id="hatshepsut-container" position="16 1 -0.4">      
+          <a-gltf-model id="hatshepsut-model" src="#hatshepsut-gltf" position="0 0 0" rotation="0 180 0" scale="2 2 2"></a-gltf-model>
+          <a-entity 
+            id="hatshepsut-label" 
+            text="value: Hatshepsut; color: white; align: center; width: 3" 
+            position="0 3 0"
+            rotation="0 -90 0" 
+            scale="3 3 3"
+            visible="false">
+          </a-entity>
+        </a-entity>
+      
+        <!-- Contenedor de Tutankhamun -->
+        <a-entity id="tutankhamun-container" position="-15.3 0.8 9">      
+          <a-gltf-model id="tutankhamun-model" src="#tutankhamun-gltf" position="0 0 0" rotation="0 180 0" scale="0.02 0.02 0.02"></a-gltf-model>
+          <a-entity 
+            id="tutankhamun-label" 
+            text="value: Tutankhamun; color: white; align: center; width: 3" 
+            position="0 3 0" 
+            rotation="0 180 0"
+            scale="3 3 3"
+            visible="false">
+          </a-entity>
+        </a-entity>
+      
+        <!-- Contenedor de Sarcófago -->
+        <a-entity id="sarcophagus-container" position="-15.3 0.4 -2">      
+          <a-gltf-model id="sarcophagus-model" src="#sarcophagus-gltf" position="0 0 0" rotation="0 90 0" scale="0.02 0.02 0.02"></a-gltf-model>
+          <a-entity 
+            id="sarcophagus-label" 
+            text="value: Sarcophagus; color: white; align: center; width: 3" 
+            position="0 3 0" 
+            scale="3 3 3"
+            visible="false">
+          </a-entity>
+        </a-entity>
+      
+        <!-- Contenedor de Pirámide -->
+        <a-entity id="piramid-container" position="-15 -3 -40">      
+          <a-gltf-model id="piramid-model" src="#piramid-gltf" position="0 0 0" rotation="0 90 0" scale="0.3 0.3 0.3"></a-gltf-model>
+          <a-text value="Piramid" color="white" position="1.5 30 0" align="center" scale="10 10 10"></a-text>
+        </a-entity>
       </a-entity>
-
-      <!-- <a-gltf-model id="sphinx" shadow="receive:true;" src="#sphinx-gltf" position="13.3 2.9 2.2" rotation="180 -90 0" scale="0.3 0.3 0.3"></a-gltf-model>
-      <a-text value="Sphinx" color="white" position="11 3 3.7" rotation="0 -90 0" align="center"></a-text> -->
-
-      <a-gltf-model id="sphinx2" shadow="receive:true;" src="#sphinx-gltf" position="13.3 2.9 -5.5" rotation="180 -90 0" scale="0.3 0.3 0.3"></a-gltf-model>
-      <a-text value="Sphinx" color="white" position="11 3 -4" rotation="0 -90 0" align="center"></a-text>
-
-      <a-gltf-model id="tutankhamun" shadow="receive:true;" src="#tutankhamun-gltf" position="-15.3 0.8 9" rotation="0 180 0" scale="0.02 0.02 0.02"></a-gltf-model>
-      <a-text value="Tutankhamun" color="white" position="-15.2 3.5 8.4" rotation="0 180 0" align="center"></a-text>
-
-      <a-gltf-model id="sarcophagus" shadow="receive:true;" src="#sarcophagus-gltf" position="-15.3 0.4 -2" rotation="0 90 0" scale="0.02 0.02 0.02"></a-gltf-model>
-      <a-text value="Sarcophagus" color="white" position="-15.3 2 -2" align="center"></a-text>
-
-      <a-gltf-model id="piramid" shadow="receive:true;" src="#piramid-gltf" position="-15 -3 -40" rotation="0 90 0" scale="0.3 0.3 0.3"></a-gltf-model>
-      <a-text value="Piramid" color="white" position="-13.5 15 -30" align="center" scale="10 10 10"></a-text>
+      
 
 
 
@@ -291,47 +357,51 @@
         });
       </script>
 
+      
 <script>
-  AFRAME.registerComponent('show-on-proximity', {
+  AFRAME.registerComponent('show-label-on-distance', {
     schema: {
-      target: { type: 'selector', default: '#cameraRig' },
-      distance: { type: 'number', default: 5 }, // Distancia para mostrar el texto
+      target: { type: 'selector', default: '#cameraRig' }, // Elemento para medir distancia
+      label: { type: 'selector' }, // Texto que se muestra
+      distance: { type: 'number', default: 6 } // Distancia para mostrar texto
     },
-    init: function () {
-      this.label = this.el.querySelector('[text]'); // Busca el texto dentro del modelo
-      this.label.setAttribute('visible', 'false');
-    },
-    tick: function () {
-      const targetPosition = this.data.target.object3D.position;
-      const modelPosition = this.el.object3D.position;
 
-      // Calcula la distancia entre el jugador y el modelo
-      const distance = modelPosition.distanceTo(targetPosition);
-      // Muestra o esconde el texto según la distancia
-      console.log(distance)
-      console.log(this.data.distance)
+    tick: function () {
+      const label = this.data.label;
+      const targetPosition = new THREE.Vector3();
+      const modelPosition = new THREE.Vector3();
+
+      // Obtener posición global del target (cameraRig)
+      this.data.target.object3D.getWorldPosition(targetPosition);
+
+      // Obtener posición global del modelo asociado
+      this.el.object3D.getWorldPosition(modelPosition);
+
+      // Calcular distancia entre posiciones globales
+      const distance = targetPosition.distanceTo(modelPosition);
+
+      // Mostrar u ocultar el texto según la distancia
       if (distance <= this.data.distance) {
-        if (!this.label.getAttribute('visible')) {
-          this.label.setAttribute('visible', 'true');
-          this.label.setAttribute('animation', {
-            property: 'position',
-            from: '0 0 0',
-            to: '0 2 0',
-            dur: 1000,
-            easing: 'easeOutCubic',
-          });
-        }
+        label.setAttribute('visible', 'true');
       } else {
-        if (this.label.getAttribute('visible')) {
-          this.label.setAttribute('visible', 'false');
-        }
+        label.setAttribute('visible', 'false');
       }
-    },
+    }
   });
 
-  // Agrega el componente a cada modelo automáticamente
-  document.querySelectorAll('#models-container > a-gltf-model').forEach(model => {
-    model.setAttribute('show-on-proximity', 'distance: 5');
+  // Iterar sobre cada contenedor de modelo dentro del models-container
+  document.querySelectorAll('#models-container > a-entity').forEach(container => {
+    const model = container.querySelector('a-gltf-model');
+    const label = container.querySelector('[text]'); // Busca la etiqueta con texto en cada contenedor
+
+    if (model && label) {
+      // Aplicar el componente al modelo con la etiqueta asociada
+      model.setAttribute('show-label-on-distance', {
+        target: '#cameraRig',
+        label: `#${label.id}`,
+        distance: 6 // Ajusta esta distancia según sea necesario
+      });
+    }
   });
 </script>
 
